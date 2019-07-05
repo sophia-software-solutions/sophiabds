@@ -1,0 +1,6 @@
+${PODS_ROOT}/Target Support Files/Pods-PostingProject/Pods-PostingProject-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework
+${BUILT_PRODUCTS_DIR}/PullToRefresher/PullToRefresh.framework
+${BUILT_PRODUCTS_DIR}/SpringIndicator/SpringIndicator.framework
+${BUILT_PRODUCTS_DIR}/SwiftDate/SwiftDate.framework
