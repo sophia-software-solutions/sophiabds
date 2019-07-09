@@ -33,6 +33,7 @@
 		041EFF1422BB33C800848C7D /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041EFF1222BB33C800848C7D /* HomeVC.swift */; };
 		041EFF1522BB33C800848C7D /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 041EFF1322BB33C800848C7D /* HomeVC.xib */; };
 		041EFF1722BB33DE00848C7D /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041EFF1622BB33DE00848C7D /* HomePresenter.swift */; };
+		04F292EE22D43E6700537605 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F292ED22D43E6700537605 /* Service.swift */; };
 		141BA69CE8664ECF15B1696D /* Pods_PostingProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FBB0185F4587D6946C57C58 /* Pods_PostingProjectUITests.framework */; };
 		66833E8ADCEBAE37BA94E85D /* Pods_PostingProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D4BF0ABA706AB0A2FC4D5F5 /* Pods_PostingProjectTests.framework */; };
 		CB3DC6EF194A017E087F4D5D /* Pods_PostingProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 501A36288D7A96952230850D /* Pods_PostingProject.framework */; };
@@ -88,6 +89,7 @@
 		041EFF1222BB33C800848C7D /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		041EFF1322BB33C800848C7D /* HomeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeVC.xib; sourceTree = "<group>"; };
 		041EFF1622BB33DE00848C7D /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		04F292ED22D43E6700537605 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		0FBB0185F4587D6946C57C58 /* Pods_PostingProjectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PostingProjectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D4BF0ABA706AB0A2FC4D5F5 /* Pods_PostingProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PostingProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		501A36288D7A96952230850D /* Pods_PostingProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PostingProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -153,7 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				041EFEF622BB27A300848C7D /* App Setup */,
-				041EFEF522BB277700848C7D /* Service */,
+				04F292EC22D43E5600537605 /* Service */,
 				041EFEF422BB277500848C7D /* Controllers */,
 				041EFEF322BB277400848C7D /* Models */,
 				041EFEF222BB277200848C7D /* Presenters */,
@@ -236,13 +238,6 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		041EFEF522BB277700848C7D /* Service */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Service;
-			sourceTree = "<group>";
-		};
 		041EFEF622BB27A300848C7D /* App Setup */ = {
 			isa = PBXGroup;
 			children = (
@@ -261,6 +256,14 @@
 				041EFEBF22BB250800848C7D /* PostingProject.xcdatamodeld */,
 			);
 			path = Others;
+			sourceTree = "<group>";
+		};
+		04F292EC22D43E5600537605 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				04F292ED22D43E6700537605 /* Service.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		723335E2A324B46CEDA5947B /* Pods */ = {
@@ -516,6 +519,7 @@
 				041EFF0D22BB293D00848C7D /* LandingPresenter.swift in Sources */,
 				041EFF0622BB286600848C7D /* SignInVC.swift in Sources */,
 				041EFF0F22BB294D00848C7D /* SignUpPresenter.swift in Sources */,
+				04F292EE22D43E6700537605 /* Service.swift in Sources */,
 				041EFEFD22BB27D900848C7D /* ConstantList.swift in Sources */,
 				041EFF0A22BB288000848C7D /* LandingVC.swift in Sources */,
 				041EFEED22BB276300848C7D /* UICollectionViewFlowLayoutExtension.swift in Sources */,
@@ -704,7 +708,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 875673R553;
+				DEVELOPMENT_TEAM = 5T98XY4LG6;
 				INFOPLIST_FILE = "$(SRCROOT)/PostingProject/Others/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -723,7 +727,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 875673R553;
+				DEVELOPMENT_TEAM = 5T98XY4LG6;
 				INFOPLIST_FILE = "$(SRCROOT)/PostingProject/Others/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
