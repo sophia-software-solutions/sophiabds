@@ -59,10 +59,10 @@
                                             <rect key="frame" x="0.0" y="40" width="375" height="50"/>
                                             <subviews>
                                                 <view opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Avq-en-bZ8">
-                                                    <rect key="frame" x="30" y="0.0" width="315" height="40"/>
+                                                    <rect key="frame" x="30" y="0.0" width="315" height="45"/>
                                                     <subviews>
                                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First Name" adjustsFontSizeToFit="NO" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ag5-Qg-xqI">
-                                                            <rect key="frame" x="10" y="0.0" width="300" height="40"/>
+                                                            <rect key="frame" x="10" y="0.0" width="300" height="45"/>
                                                             <color key="textColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="name"/>
@@ -75,13 +75,13 @@
                                                     <constraints>
                                                         <constraint firstItem="ag5-Qg-xqI" firstAttribute="leading" secondItem="Avq-en-bZ8" secondAttribute="leading" constant="10" id="Ahh-6f-NAu"/>
                                                         <constraint firstAttribute="trailing" secondItem="ag5-Qg-xqI" secondAttribute="trailing" constant="5" id="FBb-2r-tlJ"/>
-                                                        <constraint firstAttribute="height" constant="40" id="LmC-lT-USD"/>
+                                                        <constraint firstAttribute="height" constant="45" id="LmC-lT-USD"/>
                                                         <constraint firstItem="ag5-Qg-xqI" firstAttribute="top" secondItem="Avq-en-bZ8" secondAttribute="top" id="ijW-dp-rL7"/>
                                                         <constraint firstAttribute="bottom" secondItem="ag5-Qg-xqI" secondAttribute="bottom" id="vw5-ND-4ig"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                            <integer key="value" value="4"/>
+                                                            <integer key="value" value="3"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
@@ -98,10 +98,10 @@
                                             <rect key="frame" x="0.0" y="100" width="375" height="50"/>
                                             <subviews>
                                                 <view opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uCm-Iz-TKc">
-                                                    <rect key="frame" x="30" y="0.0" width="315" height="40"/>
+                                                    <rect key="frame" x="30" y="0.0" width="315" height="45"/>
                                                     <subviews>
                                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last Name" adjustsFontSizeToFit="NO" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="WYs-jK-xTO">
-                                                            <rect key="frame" x="10" y="0.0" width="300" height="40"/>
+                                                            <rect key="frame" x="10" y="0.0" width="300" height="45"/>
                                                             <color key="textColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="name"/>
@@ -114,13 +114,13 @@
                                                     <constraints>
                                                         <constraint firstItem="WYs-jK-xTO" firstAttribute="top" secondItem="uCm-Iz-TKc" secondAttribute="top" id="Soc-LD-udV"/>
                                                         <constraint firstAttribute="bottom" secondItem="WYs-jK-xTO" secondAttribute="bottom" id="ZMW-4S-han"/>
-                                                        <constraint firstAttribute="height" constant="40" id="aSG-aZ-2Zk"/>
+                                                        <constraint firstAttribute="height" constant="45" id="aSG-aZ-2Zk"/>
                                                         <constraint firstAttribute="trailing" secondItem="WYs-jK-xTO" secondAttribute="trailing" constant="5" id="dNN-1q-Cgs"/>
                                                         <constraint firstItem="WYs-jK-xTO" firstAttribute="leading" secondItem="uCm-Iz-TKc" secondAttribute="leading" constant="10" id="eOH-B1-V0c"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                            <integer key="value" value="4"/>
+                                                            <integer key="value" value="3"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
@@ -137,10 +137,10 @@
                                             <rect key="frame" x="0.0" y="160" width="375" height="50"/>
                                             <subviews>
                                                 <view opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IQp-cD-Byb">
-                                                    <rect key="frame" x="30" y="0.0" width="315" height="40"/>
+                                                    <rect key="frame" x="30" y="0.0" width="315" height="45"/>
                                                     <subviews>
                                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" adjustsFontSizeToFit="NO" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Nvj-6A-aaM">
-                                                            <rect key="frame" x="10" y="0.0" width="300" height="40"/>
+                                                            <rect key="frame" x="10" y="0.0" width="300" height="45"/>
                                                             <color key="textColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="name"/>
@@ -154,12 +154,12 @@
                                                         <constraint firstItem="Nvj-6A-aaM" firstAttribute="leading" secondItem="IQp-cD-Byb" secondAttribute="leading" constant="10" id="cDs-ik-9SY"/>
                                                         <constraint firstAttribute="trailing" secondItem="Nvj-6A-aaM" secondAttribute="trailing" constant="5" id="tgr-IC-Dd5"/>
                                                         <constraint firstAttribute="bottom" secondItem="Nvj-6A-aaM" secondAttribute="bottom" id="uFL-yg-Z0J"/>
-                                                        <constraint firstAttribute="height" constant="40" id="vc8-3t-dIq"/>
+                                                        <constraint firstAttribute="height" constant="45" id="vc8-3t-dIq"/>
                                                         <constraint firstItem="Nvj-6A-aaM" firstAttribute="top" secondItem="IQp-cD-Byb" secondAttribute="top" id="xcF-mn-k7G"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                            <integer key="value" value="4"/>
+                                                            <integer key="value" value="3"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
@@ -176,10 +176,10 @@
                                             <rect key="frame" x="0.0" y="220" width="375" height="50"/>
                                             <subviews>
                                                 <view opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o2G-4v-boS">
-                                                    <rect key="frame" x="30" y="0.0" width="315" height="40"/>
+                                                    <rect key="frame" x="30" y="0.0" width="315" height="45"/>
                                                     <subviews>
                                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" adjustsFontSizeToFit="NO" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="jjy-KZ-UhF">
-                                                            <rect key="frame" x="10" y="0.0" width="300" height="40"/>
+                                                            <rect key="frame" x="10" y="0.0" width="300" height="45"/>
                                                             <color key="textColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="name"/>
@@ -194,11 +194,11 @@
                                                         <constraint firstItem="jjy-KZ-UhF" firstAttribute="leading" secondItem="o2G-4v-boS" secondAttribute="leading" constant="10" id="cvh-cg-B9x"/>
                                                         <constraint firstAttribute="trailing" secondItem="jjy-KZ-UhF" secondAttribute="trailing" constant="5" id="djX-mO-cx6"/>
                                                         <constraint firstItem="jjy-KZ-UhF" firstAttribute="top" secondItem="o2G-4v-boS" secondAttribute="top" id="fZq-vN-mWn"/>
-                                                        <constraint firstAttribute="height" constant="40" id="kHX-Bw-VDz"/>
+                                                        <constraint firstAttribute="height" constant="45" id="kHX-Bw-VDz"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                            <integer key="value" value="4"/>
+                                                            <integer key="value" value="3"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
@@ -215,10 +215,10 @@
                                             <rect key="frame" x="0.0" y="280" width="375" height="50"/>
                                             <subviews>
                                                 <view opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g8f-5V-d3D">
-                                                    <rect key="frame" x="30" y="0.0" width="315" height="40"/>
+                                                    <rect key="frame" x="30" y="0.0" width="315" height="45"/>
                                                     <subviews>
                                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" adjustsFontSizeToFit="NO" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="WjN-MI-upg">
-                                                            <rect key="frame" x="10" y="0.0" width="300" height="40"/>
+                                                            <rect key="frame" x="10" y="0.0" width="300" height="45"/>
                                                             <color key="textColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits" returnKeyType="next" secureTextEntry="YES" textContentType="name"/>
@@ -231,13 +231,13 @@
                                                     <constraints>
                                                         <constraint firstAttribute="trailing" secondItem="WjN-MI-upg" secondAttribute="trailing" constant="5" id="CWa-2r-KQH"/>
                                                         <constraint firstItem="WjN-MI-upg" firstAttribute="top" secondItem="g8f-5V-d3D" secondAttribute="top" id="ITb-rC-AJ8"/>
-                                                        <constraint firstAttribute="height" constant="40" id="fnQ-fH-Iuq"/>
+                                                        <constraint firstAttribute="height" constant="45" id="fnQ-fH-Iuq"/>
                                                         <constraint firstAttribute="bottom" secondItem="WjN-MI-upg" secondAttribute="bottom" id="gWc-UY-U7P"/>
                                                         <constraint firstItem="WjN-MI-upg" firstAttribute="leading" secondItem="g8f-5V-d3D" secondAttribute="leading" constant="10" id="mNa-O3-fsG"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                            <integer key="value" value="4"/>
+                                                            <integer key="value" value="3"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
@@ -254,10 +254,10 @@
                                             <rect key="frame" x="0.0" y="340" width="375" height="50"/>
                                             <subviews>
                                                 <view opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y44-mT-rJq">
-                                                    <rect key="frame" x="30" y="0.0" width="315" height="40"/>
+                                                    <rect key="frame" x="30" y="0.0" width="315" height="45"/>
                                                     <subviews>
                                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm Password" adjustsFontSizeToFit="NO" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="HH8-Ok-V0Z">
-                                                            <rect key="frame" x="10" y="0.0" width="300" height="40"/>
+                                                            <rect key="frame" x="10" y="0.0" width="300" height="45"/>
                                                             <color key="textColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES" textContentType="name"/>
@@ -272,11 +272,11 @@
                                                         <constraint firstAttribute="bottom" secondItem="HH8-Ok-V0Z" secondAttribute="bottom" id="CKZ-6Q-BRF"/>
                                                         <constraint firstAttribute="trailing" secondItem="HH8-Ok-V0Z" secondAttribute="trailing" constant="5" id="Ok4-ah-mi7"/>
                                                         <constraint firstItem="HH8-Ok-V0Z" firstAttribute="top" secondItem="Y44-mT-rJq" secondAttribute="top" id="b7I-te-W29"/>
-                                                        <constraint firstAttribute="height" constant="40" id="eXO-gY-ETM"/>
+                                                        <constraint firstAttribute="height" constant="45" id="eXO-gY-ETM"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                            <integer key="value" value="4"/>
+                                                            <integer key="value" value="3"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
@@ -293,10 +293,10 @@
                                             <rect key="frame" x="0.0" y="400" width="375" height="50"/>
                                             <subviews>
                                                 <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wu7-18-pTE">
-                                                    <rect key="frame" x="30" y="10" width="315" height="40"/>
-                                                    <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <rect key="frame" x="30" y="5" width="315" height="45"/>
+                                                    <color key="backgroundColor" red="0.99944847820000005" green="0.33994680640000002" blue="0.1321237981" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="40" id="4gG-e9-yjn"/>
+                                                        <constraint firstAttribute="height" constant="45" id="4gG-e9-yjn"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
                                                     <state key="normal" title="SIGN UP">
@@ -304,7 +304,7 @@
                                                     </state>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                            <integer key="value" value="4"/>
+                                                            <integer key="value" value="3"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                     <connections>
@@ -316,7 +316,7 @@
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="wu7-18-pTE" secondAttribute="trailing" constant="30" id="3Lp-Gb-cop"/>
                                                 <constraint firstAttribute="height" constant="50" id="Hob-BX-XTK"/>
-                                                <constraint firstItem="wu7-18-pTE" firstAttribute="top" secondItem="Lsi-gU-iKR" secondAttribute="top" constant="10" id="gok-Oa-aXD"/>
+                                                <constraint firstItem="wu7-18-pTE" firstAttribute="top" secondItem="Lsi-gU-iKR" secondAttribute="top" constant="5" id="gok-Oa-aXD"/>
                                                 <constraint firstItem="wu7-18-pTE" firstAttribute="leading" secondItem="Lsi-gU-iKR" secondAttribute="leading" constant="30" id="mC2-H7-Met"/>
                                             </constraints>
                                         </view>
@@ -342,7 +342,7 @@
                 </scrollView>
                 <view opaque="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YRG-ga-wqA" customClass="SpringIndicator" customModule="SpringIndicator">
                     <rect key="frame" x="170" y="316" width="35" height="35"/>
-                    <color key="tintColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="tintColor" red="0.99944847820000005" green="0.33994680640000002" blue="0.1321237981" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="35" id="MvX-PY-1GI"/>
                         <constraint firstAttribute="width" constant="35" id="oDU-av-V6F"/>
@@ -353,7 +353,7 @@
                             <real key="value" value="4"/>
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
-                            <color key="value" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="value" red="0.99944847820000005" green="0.33994680640000002" blue="0.1321237981" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="lineCap" value="YES"/>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="animating" value="YES"/>
@@ -361,6 +361,7 @@
                 </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="tintColor" red="0.99944847820000005" green="0.33994680640000002" blue="0.1321237981" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="tdR-C7-3qR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="MSF-7h-jWx"/>
                 <constraint firstItem="tdR-C7-3qR" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="OIB-fD-FWy"/>

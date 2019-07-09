@@ -60,7 +60,7 @@ class LandingVC: UIViewController, Presenter {
 
 extension LandingVC: BasicController {
     func setupViews() {
-        loginButton.layer.borderColor = C.Color.BG.aquaBlue.cgColor
+        loginButton.layer.borderColor = C.Color.BG.orange.cgColor
         loginButton.layer.borderWidth = 2.0
     }
     

@@ -52,6 +52,8 @@ class SignInVC: UIViewController, Presenter {
     @IBAction func onPressDone(_ sender: Any) {
         view.endEditing(true)
         guard validating() else { return }
+        
+        navigationController?.popViewController(animated: false)
         performSegue(withIdentifier: C.segueID.toHomeSegueID, sender: nil)
     }
 }

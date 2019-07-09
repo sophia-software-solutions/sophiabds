@@ -34,6 +34,14 @@
 		041EFF1522BB33C800848C7D /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 041EFF1322BB33C800848C7D /* HomeVC.xib */; };
 		041EFF1722BB33DE00848C7D /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041EFF1622BB33DE00848C7D /* HomePresenter.swift */; };
 		04F292EE22D43E6700537605 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F292ED22D43E6700537605 /* Service.swift */; };
+		04F292F222D472F800537605 /* HomeItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04F292F022D472F800537605 /* HomeItemCell.xib */; };
+		04F292F322D472F800537605 /* HomeItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F292F122D472F800537605 /* HomeItemCell.swift */; };
+		04F292F622D477B100537605 /* NewsItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F292F422D477B100537605 /* NewsItemCell.swift */; };
+		04F292F722D477B100537605 /* NewsItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04F292F522D477B100537605 /* NewsItemCell.xib */; };
+		04F2930022D48E9500537605 /* MessageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F292FE22D48E9500537605 /* MessageVC.swift */; };
+		04F2930122D48E9500537605 /* MessageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04F292FF22D48E9500537605 /* MessageVC.xib */; };
+		04F2930422D48EA600537605 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F2930222D48EA600537605 /* ProfileVC.swift */; };
+		04F2930522D48EA600537605 /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04F2930322D48EA600537605 /* ProfileVC.xib */; };
 		141BA69CE8664ECF15B1696D /* Pods_PostingProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FBB0185F4587D6946C57C58 /* Pods_PostingProjectUITests.framework */; };
 		66833E8ADCEBAE37BA94E85D /* Pods_PostingProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D4BF0ABA706AB0A2FC4D5F5 /* Pods_PostingProjectTests.framework */; };
 		CB3DC6EF194A017E087F4D5D /* Pods_PostingProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 501A36288D7A96952230850D /* Pods_PostingProject.framework */; };
@@ -90,6 +98,14 @@
 		041EFF1322BB33C800848C7D /* HomeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeVC.xib; sourceTree = "<group>"; };
 		041EFF1622BB33DE00848C7D /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		04F292ED22D43E6700537605 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		04F292F022D472F800537605 /* HomeItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeItemCell.xib; sourceTree = "<group>"; };
+		04F292F122D472F800537605 /* HomeItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeItemCell.swift; sourceTree = "<group>"; };
+		04F292F422D477B100537605 /* NewsItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsItemCell.swift; sourceTree = "<group>"; };
+		04F292F522D477B100537605 /* NewsItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsItemCell.xib; sourceTree = "<group>"; };
+		04F292FE22D48E9500537605 /* MessageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageVC.swift; sourceTree = "<group>"; };
+		04F292FF22D48E9500537605 /* MessageVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageVC.xib; sourceTree = "<group>"; };
+		04F2930222D48EA600537605 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		04F2930322D48EA600537605 /* ProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileVC.xib; sourceTree = "<group>"; };
 		0FBB0185F4587D6946C57C58 /* Pods_PostingProjectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PostingProjectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D4BF0ABA706AB0A2FC4D5F5 /* Pods_PostingProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PostingProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		501A36288D7A96952230850D /* Pods_PostingProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PostingProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -159,6 +175,7 @@
 				041EFEF422BB277500848C7D /* Controllers */,
 				041EFEF322BB277400848C7D /* Models */,
 				041EFEF222BB277200848C7D /* Presenters */,
+				04F292EF22D472C200537605 /* Cells */,
 				041EFEF122BB277000848C7D /* Constants */,
 				041EFEF022BB276700848C7D /* Extensions */,
 				041EFEF722BB27B500848C7D /* Others */,
@@ -226,14 +243,12 @@
 		041EFEF422BB277500848C7D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				041EFF0822BB288000848C7D /* LandingVC.swift */,
-				041EFF0922BB288000848C7D /* LandingVC.xib */,
-				041EFF0022BB285900848C7D /* SignupVC.swift */,
-				041EFF0122BB285A00848C7D /* SignupVC.xib */,
-				041EFF0422BB286600848C7D /* SignInVC.swift */,
-				041EFF0522BB286600848C7D /* SignInVC.xib */,
-				041EFF1222BB33C800848C7D /* HomeVC.swift */,
-				041EFF1322BB33C800848C7D /* HomeVC.xib */,
+				04F292FB22D48E2F00537605 /* Landing  */,
+				04F292FA22D48E2D00537605 /* Login */,
+				04F292F822D48E2700537605 /* Home */,
+				04F292FD22D48E4F00537605 /* Profile */,
+				04F292FC22D48E4A00537605 /* Message */,
+				04F292F922D48E2B00537605 /* Sign up */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -264,6 +279,71 @@
 				04F292ED22D43E6700537605 /* Service.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		04F292EF22D472C200537605 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				04F292F422D477B100537605 /* NewsItemCell.swift */,
+				04F292F522D477B100537605 /* NewsItemCell.xib */,
+				04F292F122D472F800537605 /* HomeItemCell.swift */,
+				04F292F022D472F800537605 /* HomeItemCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		04F292F822D48E2700537605 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				041EFF1222BB33C800848C7D /* HomeVC.swift */,
+				041EFF1322BB33C800848C7D /* HomeVC.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		04F292F922D48E2B00537605 /* Sign up */ = {
+			isa = PBXGroup;
+			children = (
+				041EFF0022BB285900848C7D /* SignupVC.swift */,
+				041EFF0122BB285A00848C7D /* SignupVC.xib */,
+			);
+			path = "Sign up";
+			sourceTree = "<group>";
+		};
+		04F292FA22D48E2D00537605 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				041EFF0422BB286600848C7D /* SignInVC.swift */,
+				041EFF0522BB286600848C7D /* SignInVC.xib */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		04F292FB22D48E2F00537605 /* Landing  */ = {
+			isa = PBXGroup;
+			children = (
+				041EFF0822BB288000848C7D /* LandingVC.swift */,
+				041EFF0922BB288000848C7D /* LandingVC.xib */,
+			);
+			path = "Landing ";
+			sourceTree = "<group>";
+		};
+		04F292FC22D48E4A00537605 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				04F292FE22D48E9500537605 /* MessageVC.swift */,
+				04F292FF22D48E9500537605 /* MessageVC.xib */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		04F292FD22D48E4F00537605 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				04F2930222D48EA600537605 /* ProfileVC.swift */,
+				04F2930322D48EA600537605 /* ProfileVC.xib */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		723335E2A324B46CEDA5947B /* Pods */ = {
@@ -397,13 +477,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04F2930122D48E9500537605 /* MessageVC.xib in Resources */,
 				041EFF0B22BB288000848C7D /* LandingVC.xib in Resources */,
+				04F292F222D472F800537605 /* HomeItemCell.xib in Resources */,
 				041EFF0722BB286600848C7D /* SignInVC.xib in Resources */,
 				041EFF0322BB285A00848C7D /* SignupVC.xib in Resources */,
 				041EFEC622BB250B00848C7D /* LaunchScreen.storyboard in Resources */,
 				041EFEC322BB250B00848C7D /* Assets.xcassets in Resources */,
+				04F292F722D477B100537605 /* NewsItemCell.xib in Resources */,
 				041EFEBE22BB250800848C7D /* Main.storyboard in Resources */,
 				041EFF1522BB33C800848C7D /* HomeVC.xib in Resources */,
+				04F2930522D48EA600537605 /* ProfileVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -518,11 +602,13 @@
 				041EFEEE22BB276300848C7D /* NotificationExtension.swift in Sources */,
 				041EFF0D22BB293D00848C7D /* LandingPresenter.swift in Sources */,
 				041EFF0622BB286600848C7D /* SignInVC.swift in Sources */,
+				04F2930022D48E9500537605 /* MessageVC.swift in Sources */,
 				041EFF0F22BB294D00848C7D /* SignUpPresenter.swift in Sources */,
 				04F292EE22D43E6700537605 /* Service.swift in Sources */,
 				041EFEFD22BB27D900848C7D /* ConstantList.swift in Sources */,
 				041EFF0A22BB288000848C7D /* LandingVC.swift in Sources */,
 				041EFEED22BB276300848C7D /* UICollectionViewFlowLayoutExtension.swift in Sources */,
+				04F292F622D477B100537605 /* NewsItemCell.swift in Sources */,
 				041EFEEF22BB276300848C7D /* UIViewControllerExtension.swift in Sources */,
 				041EFF1422BB33C800848C7D /* HomeVC.swift in Sources */,
 				041EFF1122BB295A00848C7D /* SignInPresenter.swift in Sources */,
@@ -530,7 +616,9 @@
 				041EFEFC22BB27D900848C7D /* ProtocolList.swift in Sources */,
 				041EFEFB22BB27D900848C7D /* EnumList.swift in Sources */,
 				041EFEB922BB250800848C7D /* AppDelegate.swift in Sources */,
+				04F292F322D472F800537605 /* HomeItemCell.swift in Sources */,
 				041EFF0222BB285A00848C7D /* SignupVC.swift in Sources */,
+				04F2930422D48EA600537605 /* ProfileVC.swift in Sources */,
 				041EFEC122BB250800848C7D /* PostingProject.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        setupStyle()
         return true
     }
 
@@ -89,5 +90,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
 
+    func setupStyle() {
+        window?.tintColor = C.Color.BG.orange
+        
+        //Navbar
+        let appearance = UINavigationBar.appearance()
+        appearance.tintColor =  C.Color.BG.snow
+        appearance.barTintColor = C.Color.BG.orange
+        appearance.isTranslucent = false
+        appearance.barStyle = .black
+        appearance.titleTextAttributes = [
+//            NSAttributedString.Key.font: UIFont(name: "Roboto-Regular", size: 17)!,
+            NSAttributedString.Key.foregroundColor: C.Color.BG.snow
+        ]
+    }
+    
+    func setupDropdown() {
+        
+    }
 }
 

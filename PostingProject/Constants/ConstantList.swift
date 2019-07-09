@@ -65,6 +65,7 @@ struct C {
             static let carminePink: UIColor = UIColor(red: 235/255, green: 65/255, blue: 65/255, alpha: 1.0)
             static let yellowGreen: UIColor = UIColor(red: 129/255, green: 193/255, blue: 33/255, alpha: 1.0)
             static let aquaBlue: UIColor = UIColor(red: 0/255, green: 150/255, blue: 255/255, alpha: 1.0)
+            static let orange: UIColor = UIColor(red: 255/255, green: 87/255, blue: 25/255, alpha: 1.0)
         }
         
         //Status Colors
@@ -82,12 +83,8 @@ struct C {
     }
     
     struct CellNib {
-        static let sensorCell = "SensorTBVCell"
-        static let deviceCell = "BluetoothDeviceCell"
         static let homeCell = "HomeItemCell"
-        static let directionCell = "DirectionCell"
-        static let sensorItemCell = "SensorItemCell"
-        static let dropdownPlusCell = "DropdownPlusCell"
+        static let newsItemCell = "NewsItemCell"
     }
     
     struct Key {
