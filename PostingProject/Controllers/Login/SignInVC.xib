@@ -57,7 +57,7 @@
                                                 <view opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="In2-8k-lra">
                                                     <rect key="frame" x="30" y="0.0" width="315" height="45"/>
                                                     <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="cAb-vl-bvv">
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="cAb-vl-bvv">
                                                             <rect key="frame" x="10" y="0.0" width="300" height="45"/>
                                                             <subviews>
                                                                 <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-user_male" translatesAutoresizingMaskIntoConstraints="NO" id="Glr-hI-vrH">
@@ -67,7 +67,7 @@
                                                                     </constraints>
                                                                 </imageView>
                                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" adjustsFontSizeToFit="NO" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="NoG-SI-gno">
-                                                                    <rect key="frame" x="30" y="0.0" width="270" height="45"/>
+                                                                    <rect key="frame" x="35" y="0.0" width="265" height="45"/>
                                                                     <color key="textColor" red="0.1333333333" green="0.14901960780000001" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
                                                                     <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="name"/>
@@ -107,7 +107,7 @@
                                                 <view opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jku-dC-kGr">
                                                     <rect key="frame" x="30" y="0.0" width="315" height="45"/>
                                                     <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="uN4-cI-yps">
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="uN4-cI-yps">
                                                             <rect key="frame" x="10" y="0.0" width="300" height="45"/>
                                                             <subviews>
                                                                 <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-lock_2-1" translatesAutoresizingMaskIntoConstraints="NO" id="jbi-tw-fgU">
@@ -117,7 +117,7 @@
                                                                     </constraints>
                                                                 </imageView>
                                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" adjustsFontSizeToFit="NO" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="3J3-Xh-jzV">
-                                                                    <rect key="frame" x="30" y="0.0" width="270" height="45"/>
+                                                                    <rect key="frame" x="35" y="0.0" width="265" height="45"/>
                                                                     <color key="textColor" red="0.1333333333" green="0.14901960780000001" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
                                                                     <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES" textContentType="name"/>
