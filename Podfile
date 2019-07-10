@@ -9,7 +9,9 @@ target 'PostingProject' do
 #  pod 'PieCharts'
 #  pod 'DropDown'
 #  pod 'FontAwesome.swift'
-  use_frameworks!
+pod 'GrowingTextView', '0.6.1'
+
+use_frameworks!
 
   target 'PostingProjectTests' do
     inherit! :search_paths

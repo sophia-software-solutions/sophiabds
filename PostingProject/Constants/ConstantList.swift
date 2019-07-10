@@ -66,6 +66,7 @@ struct C {
             static let yellowGreen: UIColor = UIColor(red: 129/255, green: 193/255, blue: 33/255, alpha: 1.0)
             static let aquaBlue: UIColor = UIColor(red: 0/255, green: 150/255, blue: 255/255, alpha: 1.0)
             static let orange: UIColor = UIColor(red: 255/255, green: 87/255, blue: 25/255, alpha: 1.0)
+            static let textBG: UIColor = UIColor(red: 239/255, green: 239/255, blue: 239/255, alpha: 1.0)
         }
         
         //Status Colors
@@ -85,6 +86,7 @@ struct C {
     struct CellNib {
         static let homeCell = "HomeItemCell"
         static let newsItemCell = "NewsItemCell"
+        static let chatCell = "ChatCell"
     }
     
     struct Key {

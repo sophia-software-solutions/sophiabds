@@ -33,6 +33,9 @@
 		041EFF1422BB33C800848C7D /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041EFF1222BB33C800848C7D /* HomeVC.swift */; };
 		041EFF1522BB33C800848C7D /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 041EFF1322BB33C800848C7D /* HomeVC.xib */; };
 		041EFF1722BB33DE00848C7D /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041EFF1622BB33DE00848C7D /* HomePresenter.swift */; };
+		04BBB4EF22D5DC0400D5EAC5 /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BBB4ED22D5DC0400D5EAC5 /* ChatCell.swift */; };
+		04BBB4F022D5DC0400D5EAC5 /* ChatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04BBB4EE22D5DC0400D5EAC5 /* ChatCell.xib */; };
+		04BBB4F222D5E2FA00D5EAC5 /* MessagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BBB4F122D5E2FA00D5EAC5 /* MessagePresenter.swift */; };
 		04F292EE22D43E6700537605 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F292ED22D43E6700537605 /* Service.swift */; };
 		04F292F222D472F800537605 /* HomeItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04F292F022D472F800537605 /* HomeItemCell.xib */; };
 		04F292F322D472F800537605 /* HomeItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F292F122D472F800537605 /* HomeItemCell.swift */; };
@@ -97,6 +100,9 @@
 		041EFF1222BB33C800848C7D /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		041EFF1322BB33C800848C7D /* HomeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeVC.xib; sourceTree = "<group>"; };
 		041EFF1622BB33DE00848C7D /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		04BBB4ED22D5DC0400D5EAC5 /* ChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
+		04BBB4EE22D5DC0400D5EAC5 /* ChatCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatCell.xib; sourceTree = "<group>"; };
+		04BBB4F122D5E2FA00D5EAC5 /* MessagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagePresenter.swift; sourceTree = "<group>"; };
 		04F292ED22D43E6700537605 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		04F292F022D472F800537605 /* HomeItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeItemCell.xib; sourceTree = "<group>"; };
 		04F292F122D472F800537605 /* HomeItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeItemCell.swift; sourceTree = "<group>"; };
@@ -228,6 +234,7 @@
 				041EFF0E22BB294D00848C7D /* SignUpPresenter.swift */,
 				041EFF1022BB295A00848C7D /* SignInPresenter.swift */,
 				041EFF1622BB33DE00848C7D /* HomePresenter.swift */,
+				04BBB4F122D5E2FA00D5EAC5 /* MessagePresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -288,6 +295,8 @@
 				04F292F522D477B100537605 /* NewsItemCell.xib */,
 				04F292F122D472F800537605 /* HomeItemCell.swift */,
 				04F292F022D472F800537605 /* HomeItemCell.xib */,
+				04BBB4ED22D5DC0400D5EAC5 /* ChatCell.swift */,
+				04BBB4EE22D5DC0400D5EAC5 /* ChatCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -478,6 +487,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04F2930122D48E9500537605 /* MessageVC.xib in Resources */,
+				04BBB4F022D5DC0400D5EAC5 /* ChatCell.xib in Resources */,
 				041EFF0B22BB288000848C7D /* LandingVC.xib in Resources */,
 				04F292F222D472F800537605 /* HomeItemCell.xib in Resources */,
 				041EFF0722BB286600848C7D /* SignInVC.xib in Resources */,
@@ -607,6 +617,7 @@
 				04F292EE22D43E6700537605 /* Service.swift in Sources */,
 				041EFEFD22BB27D900848C7D /* ConstantList.swift in Sources */,
 				041EFF0A22BB288000848C7D /* LandingVC.swift in Sources */,
+				04BBB4EF22D5DC0400D5EAC5 /* ChatCell.swift in Sources */,
 				041EFEED22BB276300848C7D /* UICollectionViewFlowLayoutExtension.swift in Sources */,
 				04F292F622D477B100537605 /* NewsItemCell.swift in Sources */,
 				041EFEEF22BB276300848C7D /* UIViewControllerExtension.swift in Sources */,
@@ -619,6 +630,7 @@
 				04F292F322D472F800537605 /* HomeItemCell.swift in Sources */,
 				041EFF0222BB285A00848C7D /* SignupVC.swift in Sources */,
 				04F2930422D48EA600537605 /* ProfileVC.swift in Sources */,
+				04BBB4F222D5E2FA00D5EAC5 /* MessagePresenter.swift in Sources */,
 				041EFEC122BB250800848C7D /* PostingProject.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
