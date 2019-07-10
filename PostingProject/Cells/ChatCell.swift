@@ -12,12 +12,17 @@ import SwiftDate
 class ChatCell: UITableViewCell {
 
     @IBOutlet weak var avatarImageView: UIImageView!
-    @IBOutlet weak var messageLabel: UILabel!
-    @IBOutlet weak var messageView: UIView!
+    
+    @IBOutlet weak var leftMessageView: UIView!
+    @IBOutlet weak var leftMessageLabel: UILabel!
+    @IBOutlet weak var rightMessageView: UIView!
+    @IBOutlet weak var rightMessageLabel: UILabel!
     @IBOutlet weak var datetimeLabel: UILabel!
     @IBOutlet weak var leftView: UIView!
-    @IBOutlet weak var rightView: UIView!
+    @IBOutlet weak var rightView: UIView!    
     
+    @IBOutlet weak var trailingConstraint: NSLayoutConstraint!
+    @IBOutlet weak var leadingConstraint: NSLayoutConstraint!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -27,12 +32,10 @@ class ChatCell: UITableViewCell {
         leftView.isHidden = !message.isMe
         rightView.isHidden = message.isMe
         avatarImageView.isHidden = message.isMe
-        
-        messageView.backgroundColor = message.isMe ? C.Color.BG.orange : C.Color.BG.textBG
-        messageLabel.textColor = message.isMe ? C.Color.BG.snow : C.Color.BG.darkSlateGray
-        
-        messageLabel.textAlignment = message.isMe ? .right : .left
         datetimeLabel.textAlignment = message.isMe ? .right : .left
+        
+        leftMessageView.isHidden = message.isMe
+        rightMessageView.isHidden = !message.isMe
         
         if let image = message.image {
             avatarImageView.image = image
@@ -42,6 +45,7 @@ class ChatCell: UITableViewCell {
             datetimeLabel.text = stamp
         }
         
-        messageLabel.text = message.description
+        leftMessageLabel.text = message.description
+        rightMessageLabel.text = message.description
     }
 }

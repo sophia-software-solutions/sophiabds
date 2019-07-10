@@ -64,7 +64,8 @@ class MessageVC: UIViewController, Presenter {
         view.layoutIfNeeded()
         
         let newMsg = Message(text, Date(), true, nil)
-        presenter.messageList.append(contentsOf: [newMsg])
+        let repMsg = Message(text, Date(), false, nil)
+        presenter.messageList.append(contentsOf: [newMsg, repMsg])
         reloadAllData()
     }
     
@@ -72,7 +73,7 @@ class MessageVC: UIViewController, Presenter {
         if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
             let keyboardRectangle = keyboardFrame.cgRectValue
             let keyboardHeight = keyboardRectangle.height            
-            kbViewHeightConstraint.constant = keyboardHeight
+            kbViewHeightConstraint.constant = keyboardHeight > 50 ? keyboardHeight - 50 : 0
             view.layoutIfNeeded()
         }
     }
@@ -91,6 +92,12 @@ extension MessageVC: BasicController {
     
     private func reloadAllData() {
         chatTableView.reloadData()
+        chatTableView.layoutIfNeeded()
+        
+        if chatTableView.contentSize.height > chatTableView.frame.size.height {
+            let lastIndexPath = IndexPath(row: presenter.messageList.count-1, section: 0)
+            chatTableView.scrollToRow(at: lastIndexPath, at: .top, animated: true)
+        }
     }
     
     private func setupCollectionView() {
@@ -107,12 +114,9 @@ extension MessageVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return tableView.dequeueReusableCell(withIdentifier: C.CellNib.chatCell, for: indexPath) as! ChatCell
-    }
-    
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        let cell = cell as! ChatCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: C.CellNib.chatCell, for: indexPath) as! ChatCell
         cell.mapData(presenter.messageList[indexPath.row])
+        return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
