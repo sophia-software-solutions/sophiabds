@@ -40,6 +40,11 @@ struct C {
         }
     }
     
+    struct userDefaultKeys {
+        static let lastLoginUsername = "lastLoginUsername"
+        static let accessToken = "accessToken"
+    }
+    
     struct segueID {
         //Setup flows
         static let toSignUpSegueID = "toSignUp"
