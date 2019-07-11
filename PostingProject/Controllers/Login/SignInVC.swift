@@ -8,12 +8,16 @@
 
 import UIKit
 import SpringIndicator
+import FacebookCore
+import FacebookLogin
+import FBSDKLoginKit
 
 class SignInVC: UIViewController, Presenter {
     
     @IBOutlet weak var indicator: SpringIndicator!
     @IBOutlet weak var usernameTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
+    @IBOutlet weak var fbLoginButton: UIButton!
     
     var presenter = SignInPresenter()
     var isProcessing: Bool = false {
@@ -60,10 +64,25 @@ class SignInVC: UIViewController, Presenter {
         let appdelegate = UIApplication.shared.delegate as! AppDelegate
         appdelegate.window?.rootViewController = controller
     }
+    
+    @IBAction func onPressFBLogin(_ sender: Any) {
+        let loginManager = FBSDKLoginKit.LoginManager()
+        loginManager.logIn(permissions: [], viewController: self) { loginResult in
+            switch loginResult {
+            case .failed(let error):
+                print(error)
+            case .cancelled:
+                print("User cancelled login.")
+            case .success(let grantedPermissions, let declinedPermissions, let accessToken):
+                print("Logged in!")
+            }
+        }
+    }
 }
 
 extension SignInVC: BasicController {
     func setupViews() {
+        
     }
     
     func updateUIs() {

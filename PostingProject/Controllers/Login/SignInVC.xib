@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignInVC" customModule="PostingProject" customModuleProvider="target">
             <connections>
+                <outlet property="fbLoginButton" destination="mQf-MB-x9t" id="SOc-MQ-Ozs"/>
                 <outlet property="indicator" destination="uqJ-hW-iCz" id="Sta-rg-QJw"/>
                 <outlet property="passwordTF" destination="3J3-Xh-jzV" id="CpW-xp-bBR"/>
                 <outlet property="usernameTF" destination="NoG-SI-gno" id="l6i-Jd-npr"/>
@@ -202,6 +203,37 @@
                         <constraint firstItem="doR-75-gmb" firstAttribute="leading" secondItem="QcW-WC-Izb" secondAttribute="leading" id="siS-rd-O0f"/>
                     </constraints>
                 </scrollView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lWF-8R-cLj">
+                    <rect key="frame" x="0.0" y="597" width="375" height="70"/>
+                    <subviews>
+                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mQf-MB-x9t">
+                            <rect key="frame" x="30" y="10" width="315" height="45"/>
+                            <color key="backgroundColor" red="0.0" green="0.4866318409" blue="0.91450625659999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="45" id="6QW-fF-CmM"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                            <state key="normal" title="Login with Facebook">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="3"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="onPressFBLogin:" destination="-1" eventType="touchUpInside" id="906-D1-lm8"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="mQf-MB-x9t" firstAttribute="top" secondItem="lWF-8R-cLj" secondAttribute="top" constant="10" id="09A-r2-BLY"/>
+                        <constraint firstItem="mQf-MB-x9t" firstAttribute="leading" secondItem="lWF-8R-cLj" secondAttribute="leading" constant="30" id="5Wz-se-4Dj"/>
+                        <constraint firstAttribute="trailing" secondItem="mQf-MB-x9t" secondAttribute="trailing" constant="30" id="LS8-bf-e9R"/>
+                        <constraint firstAttribute="height" constant="70" id="OQ1-b0-LIv"/>
+                    </constraints>
+                </view>
                 <view opaque="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uqJ-hW-iCz" customClass="SpringIndicator" customModule="SpringIndicator">
                     <rect key="frame" x="170" y="316" width="35" height="35"/>
                     <color key="tintColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -225,12 +257,15 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <color key="tintColor" red="0.99944847820000005" green="0.33994680640000002" blue="0.1321237981" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstAttribute="bottom" secondItem="lWF-8R-cLj" secondAttribute="bottom" id="BN0-s9-9AI"/>
                 <constraint firstItem="QcW-WC-Izb" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="DXk-Zs-HYr"/>
                 <constraint firstItem="uqJ-hW-iCz" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="LX4-Lb-Ptr"/>
                 <constraint firstItem="uqJ-hW-iCz" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="MNm-Ti-4wr"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="QcW-WC-Izb" secondAttribute="bottom" id="bVa-x2-YRd"/>
+                <constraint firstAttribute="trailing" secondItem="lWF-8R-cLj" secondAttribute="trailing" id="gsA-z3-6Ve"/>
                 <constraint firstItem="QcW-WC-Izb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="hmV-C4-dCS"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="QcW-WC-Izb" secondAttribute="trailing" id="iRj-l7-25F"/>
+                <constraint firstItem="lWF-8R-cLj" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ioy-Oa-lmY"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="39.200000000000003" y="46.326836581709152"/>
