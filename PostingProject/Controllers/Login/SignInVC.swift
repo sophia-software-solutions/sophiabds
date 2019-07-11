@@ -53,8 +53,12 @@ class SignInVC: UIViewController, Presenter {
         view.endEditing(true)
         guard validating() else { return }
         
-        navigationController?.popViewController(animated: false)
-        performSegue(withIdentifier: C.segueID.toHomeSegueID, sender: nil)
+        presenter.syncUserData()
+        
+        let storyboard = UIStoryboard(name: C.StoryboardID.storyboardName, bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: C.StoryboardID.tabbar)
+        let appdelegate = UIApplication.shared.delegate as! AppDelegate
+        appdelegate.window?.rootViewController = controller
     }
 }
 
@@ -82,6 +86,7 @@ extension SignInVC: BasicController {
             return false
         }
         
+        presenter.syncUserData()
         return true
     }
 }

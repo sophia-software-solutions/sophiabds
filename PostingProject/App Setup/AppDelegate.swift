@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         setupStyle()
+        checkAndRedirect()
         return true
     }
 
@@ -107,6 +108,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func setupDropdown() {
         
+    }
+    
+    func checkAndRedirect() {
+        guard UserProfile.parseData().result else { return }
+        
+        let storyboard = UIStoryboard(name: C.StoryboardID.storyboardName, bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: C.StoryboardID.landing)
+        self.window?.rootViewController = controller
+        self.window?.makeKeyAndVisible()
     }
 }
 

@@ -27,7 +27,12 @@ class ProfileVC: UIViewController, BasicController {
     }
     
     @IBAction func onPressLogout(_ sender: Any) {
-        navigationController?.dismiss(animated: true, completion: nil)
+        UserProfile.removeData()
+        
+        let storyboard = UIStoryboard(name: C.StoryboardID.storyboardName, bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: C.StoryboardID.landing)
+        let appdelegate = UIApplication.shared.delegate as! AppDelegate
+        appdelegate.window?.rootViewController = controller
     }
 }
 

@@ -12,11 +12,10 @@ import Foundation
 import CoreBluetooth
 
 struct C {
-    struct hardcodedData {
-        static let setupOptions = ["Device", "Cloud", "Reboot Neuron", "Factory Settings"]
-        static let defaultNeuronID = "Neuron2"
-        static let tabbarTitles = ["Home", "Settings", "Connect", "Cloud", "Notify"]
-        static let wifiPassword = "123456"
+    struct StoryboardID {
+        static let storyboardName = "Main"
+        static let landing = "LandingScreen"
+        static let tabbar = "TabbarScreen"
     }
     
     struct URL {
@@ -38,11 +37,6 @@ struct C {
             static let contentInset = #keyPath(UIScrollView.contentInset)
             static let contentSize = #keyPath(UIScrollView.contentSize)
         }
-    }
-    
-    struct userDefaultKeys {
-        static let lastLoginUsername = "lastLoginUsername"
-        static let accessToken = "accessToken"
     }
     
     struct segueID {
@@ -103,6 +97,11 @@ struct C {
         static let lastDeviceUserName = "lastDeviceUserName"
         static let lastDevicePassword = "lastDevicePassword"
         static let rememberUserInfo = "rememberUserInfo"
+        
+        struct UserDefault {
+            static let lastLoginUsername = "lastLoginUsername"
+            static let accessToken = "accessToken"
+        }
     }
     
     struct XMLrequest {

@@ -75,7 +75,7 @@
         <!--Navigation Controller-->
         <scene sceneID="wyt-FC-ILi">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mhq-Hp-0ZA" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="LandingScreen" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mhq-Hp-0ZA" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="SJ9-Dc-9bJ">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -105,7 +105,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="LK0-hL-Q99">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="6cG-cd-7Rb" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabbarScreen" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6cG-cd-7Rb" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
                     <tabBar key="tabBar" opaque="NO" clipsSubviews="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="5Vn-Am-iZh">
