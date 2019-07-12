@@ -58,6 +58,8 @@
 	</array>
 	<key>FacebookAppID</key>
 	<string>512933152580451</string>
+    <key>AccountKitClientToken</key>
+    <string>283a8220adcc22b2981540cb309a0a56</string>
 	<key>FacebookDisplayName</key>
 	<string>PostingProject</string>
 	<key>LSApplicationQueriesSchemes</key>

@@ -1,4 +1,5 @@
 PODS:
+  - AccountKit (5.0.1)
   - Alamofire (4.7.3)
   - FacebookCore (0.7.0):
     - FBSDKCoreKit (~> 5.0)
@@ -21,6 +22,7 @@ PODS:
   - SwiftDate (5.0.13)
 
 DEPENDENCIES:
+  - AccountKit
   - Alamofire
   - FacebookCore
   - FacebookLogin
@@ -32,6 +34,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - AccountKit
     - Alamofire
     - FacebookCore
     - FacebookLogin
@@ -44,6 +47,7 @@ SPEC REPOS:
     - SwiftDate
 
 SPEC CHECKSUMS:
+  AccountKit: d05258857e74b04386c263a1365b27dbb5ff62b9
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   FacebookCore: 4eee98476cb37a485af5d337eb21f8cd5b3c7e6c
   FacebookLogin: 94cdad6850e86a2b04704dedfe7674a7af8148eb
@@ -55,6 +59,6 @@ SPEC CHECKSUMS:
   SpringIndicator: 96eb6158a9dc94c1623d84130639a52225f04056
   SwiftDate: f4aea5fa9dee812485f34041121a4cbde01b0dee
 
-PODFILE CHECKSUM: ab339c6c23bc7fb1836417ee4443852e2b62f92f
+PODFILE CHECKSUM: b1b91e3cc912388f696012cbf1fe1732e0b3ec9c
 
 COCOAPODS: 1.7.4

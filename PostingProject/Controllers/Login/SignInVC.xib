@@ -157,7 +157,7 @@
                                             <subviews>
                                                 <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ig-yA-eGn">
                                                     <rect key="frame" x="30" y="10" width="315" height="45"/>
-                                                    <color key="backgroundColor" red="0.99944847820000005" green="0.33994680640000002" blue="0.1321237981" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" red="1" green="0.3411764705882353" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="45" id="9qa-sv-E7e"/>
                                                     </constraints>

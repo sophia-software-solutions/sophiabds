@@ -11,6 +11,7 @@ import SpringIndicator
 import FacebookCore
 import FacebookLogin
 import FBSDKLoginKit
+import AccountKit
 
 class SignInVC: UIViewController, Presenter {
     
@@ -58,23 +59,22 @@ class SignInVC: UIViewController, Presenter {
         guard validating() else { return }
         
         presenter.syncUserData()
-        
-        let storyboard = UIStoryboard(name: C.StoryboardID.storyboardName, bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: C.StoryboardID.tabbar)
-        let appdelegate = UIApplication.shared.delegate as! AppDelegate
-        appdelegate.window?.rootViewController = controller
+        performDisplayHome()
     }
     
     @IBAction func onPressFBLogin(_ sender: Any) {
         let loginManager = FBSDKLoginKit.LoginManager()
-        loginManager.logIn(permissions: [], viewController: self) { loginResult in
+        loginManager.logIn(permissions: [.publicProfile, .email], viewController: self) { [weak self] loginResult in
+            guard let strongSelf = self else { return }
+            
             switch loginResult {
             case .failed(let error):
-                print(error)
+                strongSelf.notify(error.localizedDescription)
             case .cancelled:
-                print("User cancelled login.")
+                strongSelf.notify("Login with Facebook process has been cancelled!")
             case .success(let grantedPermissions, let declinedPermissions, let accessToken):
-                print("Logged in!")
+                print("Success with info\n\(grantedPermissions)\n\n\(declinedPermissions)\n\n\(accessToken)\n")
+                strongSelf.performDisplayHome()
             }
         }
     }
@@ -107,6 +107,13 @@ extension SignInVC: BasicController {
         
         presenter.syncUserData()
         return true
+    }
+    
+    func performDisplayHome() {
+        let storyboard = UIStoryboard(name: C.StoryboardID.storyboardName, bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: C.StoryboardID.tabbar)
+        let appdelegate = UIApplication.shared.delegate as! AppDelegate
+        appdelegate.window?.rootViewController = controller
     }
 }
 

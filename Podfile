@@ -16,6 +16,7 @@ target 'PostingProject' do
   pod 'GrowingTextView', '0.6.1'
   pod 'FacebookCore'
   pod 'FacebookLogin'
+  pod 'AccountKit'
   
 end
 

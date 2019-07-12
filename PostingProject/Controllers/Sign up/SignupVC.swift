@@ -8,6 +8,7 @@
 
 import UIKit
 import SpringIndicator
+import AccountKit
 
 class SignupVC: UIViewController, Presenter {
     
@@ -19,6 +20,7 @@ class SignupVC: UIViewController, Presenter {
     @IBOutlet weak var passwordTF: UITextField!
     @IBOutlet weak var confirmPassTF: UITextField!
     
+    var accountKit: AccountKit?
     var presenter = SignUpPresenter()
     var isProcessing: Bool = false {
         didSet {
@@ -62,15 +64,60 @@ class SignupVC: UIViewController, Presenter {
             strongSelf.back()
         }
     }
+    
+    @IBAction func onPressSignupWithFB(_ sender: Any) {
+        loginWithEmail()
+    }
+    
+    func prepareFBLoginVC(_ loginViewController: AKFViewController) {
+        loginViewController.delegate = self
+        loginViewController.uiManager = SkinManager(skinType: .classic, primaryColor: C.Color.BG.orange)
+    }
+    
+    func loginWithPhone(){
+        let inputState = UUID().uuidString
+        guard let controller = accountKit?.viewControllerForPhoneLogin(with: nil, state: inputState) else {
+            return
+        }
+        
+        controller.isSendToFacebookEnabled = true
+        prepareFBLoginVC(controller)
+        present(controller as UIViewController, animated: true, completion: nil)
+    }
+    
+    func loginWithEmail() {
+        let inputState = NSUUID().uuidString
+        guard let controller = accountKit?.viewControllerForEmailLogin(with: nil, state: inputState) else {
+            return
+        }
+        
+        prepareFBLoginVC(controller)
+        present(controller as UIViewController, animated: true, completion: nil)
+    }
 }
 
 extension SignupVC: BasicController {
     func setupViews() {
+        if accountKit == nil {
+            accountKit = AccountKit(responseType: .accessToken)
+        }
         
+        accountKit?.requestAccount{ [weak self] (account, error) in
+            guard let strongSelf = self else { return }
+            if let error = error {
+                print("Error: \(error.localizedDescription)")
+            }
+        }
     }
     
     func updateUIs() {
-        
+        if accountKit?.currentAccessToken != nil {
+            // if the user is already logged in, go to the main screen
+            // ...
+        }
+        else {
+            // Show the login screen
+        }
     }
     
     func validating() -> Bool {
@@ -148,5 +195,23 @@ extension SignupVC: UITextFieldDelegate {
             textField.resignFirstResponder()
         }
         return true
+    }
+}
+
+extension SignupVC: AKFViewControllerDelegate {
+    func viewController(_ viewController: UIViewController & AKFViewController, didCompleteLoginWith code: String, state: String) {
+        print("Did complete login with code \(code) state \(state)")
+    }
+    
+    func viewController(_ viewController: UIViewController & AKFViewController, didCompleteLoginWith accessToken: AccessToken, state: String) {
+        print("Did complete login with access token \(accessToken.tokenString) state \(state)")
+    }
+    
+    func viewController(_ viewController: UIViewController & AKFViewController, didFailWithError error: Error) {
+        print("Did fail with error \(error.localizedDescription)")
+    }
+    
+    func viewControllerDidCancel(_ viewController: UIViewController & AKFViewController) {
+        print("Did cancel the login")
     }
 }
