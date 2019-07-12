@@ -7,10 +7,14 @@
 //
 
 import UIKit
+import SpringIndicator
+import AccountKit
 
 class ProfileVC: UIViewController, BasicController {
 
     @IBOutlet weak var logoutButton: UIButton!
+    
+    var accountKit: AccountKit?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,12 +38,29 @@ class ProfileVC: UIViewController, BasicController {
         let appdelegate = UIApplication.shared.delegate as! AppDelegate
         appdelegate.window?.rootViewController = controller
     }
+    
+    @IBAction func onPressLogoutFB(_ sender: Any) {
+        accountKit?.logOut{ [weak self] (success, error) in
+            guard let strongSelf = self else { return }
+            if success {
+                strongSelf.notify("Logout successfully!")
+            } else if let error = error?.localizedDescription {
+                strongSelf.notify("Logout failed with error \(error)")
+            } else {
+                strongSelf.notify("Logout failed with error")
+            }
+        }
+    }
 }
 
 extension ProfileVC {
     func setupViews() {
         logoutButton.layer.borderColor = C.Color.BG.orange.cgColor
         logoutButton.layer.borderWidth = 1.0
+        
+        if accountKit == nil {
+            accountKit = AccountKit(responseType: .accessToken)
+        }
     }
     
     func updateUIs() {

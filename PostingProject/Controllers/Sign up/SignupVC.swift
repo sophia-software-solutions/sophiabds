@@ -101,19 +101,22 @@ extension SignupVC: BasicController {
         if accountKit == nil {
             accountKit = AccountKit(responseType: .accessToken)
         }
-        
-        accountKit?.requestAccount{ [weak self] (account, error) in
-            guard let strongSelf = self else { return }
-            if let error = error {
-                print("Error: \(error.localizedDescription)")
-            }
-        }
     }
     
     func updateUIs() {
         if accountKit?.currentAccessToken != nil {
+            
             // if the user is already logged in, go to the main screen
-            // ...
+            accountKit?.requestAccount{ [weak self] (account, error) in
+                guard let strongSelf = self else { return }
+                if let error = error {
+                    strongSelf.notify("Error: \(error.localizedDescription)")
+                } else if let email = account?.emailAddress {
+                    strongSelf.notify("You have logged in with Email \(email)")
+                } else {
+                    strongSelf.notify("You have logged in with some weird errors")
+                }
+            }
         }
         else {
             // Show the login screen
