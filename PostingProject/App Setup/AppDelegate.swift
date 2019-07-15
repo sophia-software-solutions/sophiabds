@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import GoogleSignIn
 import FacebookCore
 import FBSDKCoreKit
 
@@ -20,13 +21,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         setupStyle()
         checkAndRedirect()
+        
+        //Google Delegate
+        GIDSignIn.sharedInstance()?.clientID = C.GoogleCerts.clientID
+        
+        //Facebook Delegate
         ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
         
         return true
     }
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-        return ApplicationDelegate.shared.application(app, open: url, options: options)
+        let facebookDidHandle :Bool = ApplicationDelegate.shared.application(app, open: url, options: options)
+        let googleDidHandle: Bool = GIDSignIn.sharedInstance().handle(url, sourceApplication:options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String, annotation: [:])
+        
+        return facebookDidHandle || googleDidHandle
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

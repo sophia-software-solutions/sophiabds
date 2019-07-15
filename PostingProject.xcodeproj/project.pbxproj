@@ -40,6 +40,9 @@
 		04BBB4F822D72BCA00D5EAC5 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BBB4F722D72BCA00D5EAC5 /* UserProfile.swift */; };
 		04BBB4FA22DC59E100D5EAC5 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BBB4F922DC59E100D5EAC5 /* ProfilePresenter.swift */; };
 		04BBB4FC22DC601400D5EAC5 /* SocialSignInService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BBB4FB22DC601400D5EAC5 /* SocialSignInService.swift */; };
+		04BBB4FE22DC684A00D5EAC5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04BBB4FD22DC684900D5EAC5 /* GoogleService-Info.plist */; };
+		04BBB50122DC69A500D5EAC5 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BBB4FF22DC69A500D5EAC5 /* LoginVC.swift */; };
+		04BBB50222DC69A500D5EAC5 /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04BBB50022DC69A500D5EAC5 /* LoginVC.xib */; };
 		04F292EE22D43E6700537605 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F292ED22D43E6700537605 /* Service.swift */; };
 		04F292F222D472F800537605 /* HomeItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04F292F022D472F800537605 /* HomeItemCell.xib */; };
 		04F292F322D472F800537605 /* HomeItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F292F122D472F800537605 /* HomeItemCell.swift */; };
@@ -111,6 +114,9 @@
 		04BBB4F722D72BCA00D5EAC5 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		04BBB4F922DC59E100D5EAC5 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
 		04BBB4FB22DC601400D5EAC5 /* SocialSignInService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialSignInService.swift; sourceTree = "<group>"; };
+		04BBB4FD22DC684900D5EAC5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		04BBB4FF22DC69A500D5EAC5 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		04BBB50022DC69A500D5EAC5 /* LoginVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
 		04F292ED22D43E6700537605 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		04F292F022D472F800537605 /* HomeItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeItemCell.xib; sourceTree = "<group>"; };
 		04F292F122D472F800537605 /* HomeItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeItemCell.swift; sourceTree = "<group>"; };
@@ -284,6 +290,7 @@
 			children = (
 				041EFEC222BB250B00848C7D /* Assets.xcassets */,
 				041EFEC422BB250B00848C7D /* LaunchScreen.storyboard */,
+				04BBB4FD22DC684900D5EAC5 /* GoogleService-Info.plist */,
 				041EFEC722BB250B00848C7D /* Info.plist */,
 				041EFEBF22BB250800848C7D /* PostingProject.xcdatamodeld */,
 			);
@@ -336,6 +343,8 @@
 			children = (
 				041EFF0422BB286600848C7D /* SignInVC.swift */,
 				041EFF0522BB286600848C7D /* SignInVC.xib */,
+				04BBB4FF22DC69A500D5EAC5 /* LoginVC.swift */,
+				04BBB50022DC69A500D5EAC5 /* LoginVC.xib */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -499,6 +508,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04BBB50222DC69A500D5EAC5 /* LoginVC.xib in Resources */,
+				04BBB4FE22DC684A00D5EAC5 /* GoogleService-Info.plist in Resources */,
 				04F2930122D48E9500537605 /* MessageVC.xib in Resources */,
 				04BBB4F022D5DC0400D5EAC5 /* ChatCell.xib in Resources */,
 				041EFF0B22BB288000848C7D /* LandingVC.xib in Resources */,
@@ -654,6 +665,7 @@
 				04BBB4F822D72BCA00D5EAC5 /* UserProfile.swift in Sources */,
 				04F292F622D477B100537605 /* NewsItemCell.swift in Sources */,
 				041EFEEF22BB276300848C7D /* UIViewControllerExtension.swift in Sources */,
+				04BBB50122DC69A500D5EAC5 /* LoginVC.swift in Sources */,
 				041EFF1422BB33C800848C7D /* HomeVC.swift in Sources */,
 				041EFF1122BB295A00848C7D /* SignInPresenter.swift in Sources */,
 				041EFF1722BB33DE00848C7D /* HomePresenter.swift in Sources */,

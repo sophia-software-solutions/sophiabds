@@ -39,6 +39,11 @@ struct C {
         }
     }
     
+    struct GoogleCerts {
+        static let clientID = "790900901397-s6fou4u7b4siuo99tucum3fa4cpn0p9m.apps.googleusercontent.com"
+        static let reservedCientID = "com.googleusercontent.apps.790900901397-s6fou4u7b4siuo99tucum3fa4cpn0p9m"
+    }
+    
     struct segueID {
         //Setup flows
         static let toSignUpSegueID = "toSignUp"
