@@ -105,21 +105,17 @@ extension SignupVC: BasicController {
     
     func updateUIs() {
         if accountKit?.currentAccessToken != nil {
-            
             // if the user is already logged in, go to the main screen
             accountKit?.requestAccount{ [weak self] (account, error) in
                 guard let strongSelf = self else { return }
                 if let error = error {
                     strongSelf.notify("Error: \(error.localizedDescription)")
                 } else if let email = account?.emailAddress {
-                    strongSelf.notify("You have logged in with Email \(email)")
+                    strongSelf.notify("You have logged in with Facebook Email \(email)")
                 } else {
-                    strongSelf.notify("You have logged in with some weird errors")
+                    strongSelf.notify("You have logged in with some errors")
                 }
             }
-        }
-        else {
-            // Show the login screen
         }
     }
     
@@ -208,6 +204,22 @@ extension SignupVC: AKFViewControllerDelegate {
     
     func viewController(_ viewController: UIViewController & AKFViewController, didCompleteLoginWith accessToken: AccessToken, state: String) {
         print("Did complete login with access token \(accessToken.tokenString) state \(state)")
+
+        if let _ = accountKit?.currentAccessToken {
+            accountKit?.requestAccount{ [weak self] (account, error) in
+                guard let strongSelf = self else { return }
+                if let error = error {
+                    strongSelf.notify("Error: \(error.localizedDescription)")
+                } else if let email = account?.emailAddress {
+                    strongSelf.notify("You have logged in with Facebook Email \(email)", "Congratulation", didSelectOK: {
+                        UserProfile.saveData(UserProfile(accessToken.tokenString, email))
+                        strongSelf.performDisplayHome()
+                    })
+                } else {
+                    strongSelf.notify("You have logged in with some weird errors. Please retry again with another Facebook account.")
+                }
+            }
+        }        
     }
     
     func viewController(_ viewController: UIViewController & AKFViewController, didFailWithError error: Error) {

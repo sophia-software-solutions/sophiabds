@@ -38,6 +38,8 @@
 		04BBB4F222D5E2FA00D5EAC5 /* MessagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BBB4F122D5E2FA00D5EAC5 /* MessagePresenter.swift */; };
 		04BBB4F622D7278000D5EAC5 /* LocalDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BBB4F522D7278000D5EAC5 /* LocalDatabase.swift */; };
 		04BBB4F822D72BCA00D5EAC5 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BBB4F722D72BCA00D5EAC5 /* UserProfile.swift */; };
+		04BBB4FA22DC59E100D5EAC5 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BBB4F922DC59E100D5EAC5 /* ProfilePresenter.swift */; };
+		04BBB4FC22DC601400D5EAC5 /* SocialSignInService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BBB4FB22DC601400D5EAC5 /* SocialSignInService.swift */; };
 		04F292EE22D43E6700537605 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F292ED22D43E6700537605 /* Service.swift */; };
 		04F292F222D472F800537605 /* HomeItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04F292F022D472F800537605 /* HomeItemCell.xib */; };
 		04F292F322D472F800537605 /* HomeItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F292F122D472F800537605 /* HomeItemCell.swift */; };
@@ -107,6 +109,8 @@
 		04BBB4F122D5E2FA00D5EAC5 /* MessagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagePresenter.swift; sourceTree = "<group>"; };
 		04BBB4F522D7278000D5EAC5 /* LocalDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDatabase.swift; sourceTree = "<group>"; };
 		04BBB4F722D72BCA00D5EAC5 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		04BBB4F922DC59E100D5EAC5 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
+		04BBB4FB22DC601400D5EAC5 /* SocialSignInService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialSignInService.swift; sourceTree = "<group>"; };
 		04F292ED22D43E6700537605 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		04F292F022D472F800537605 /* HomeItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeItemCell.xib; sourceTree = "<group>"; };
 		04F292F122D472F800537605 /* HomeItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeItemCell.swift; sourceTree = "<group>"; };
@@ -236,6 +240,7 @@
 			children = (
 				041EFF0C22BB293D00848C7D /* LandingPresenter.swift */,
 				041EFF0E22BB294D00848C7D /* SignUpPresenter.swift */,
+				04BBB4F922DC59E100D5EAC5 /* ProfilePresenter.swift */,
 				041EFF1022BB295A00848C7D /* SignInPresenter.swift */,
 				041EFF1622BB33DE00848C7D /* HomePresenter.swift */,
 				04BBB4F122D5E2FA00D5EAC5 /* MessagePresenter.swift */,
@@ -290,6 +295,7 @@
 			children = (
 				04F292ED22D43E6700537605 /* Service.swift */,
 				04BBB4F522D7278000D5EAC5 /* LocalDatabase.swift */,
+				04BBB4FB22DC601400D5EAC5 /* SocialSignInService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -644,6 +650,7 @@
 				041EFF0A22BB288000848C7D /* LandingVC.swift in Sources */,
 				04BBB4EF22D5DC0400D5EAC5 /* ChatCell.swift in Sources */,
 				041EFEED22BB276300848C7D /* UICollectionViewFlowLayoutExtension.swift in Sources */,
+				04BBB4FC22DC601400D5EAC5 /* SocialSignInService.swift in Sources */,
 				04BBB4F822D72BCA00D5EAC5 /* UserProfile.swift in Sources */,
 				04F292F622D477B100537605 /* NewsItemCell.swift in Sources */,
 				041EFEEF22BB276300848C7D /* UIViewControllerExtension.swift in Sources */,
@@ -655,6 +662,7 @@
 				041EFEB922BB250800848C7D /* AppDelegate.swift in Sources */,
 				04F292F322D472F800537605 /* HomeItemCell.swift in Sources */,
 				041EFF0222BB285A00848C7D /* SignupVC.swift in Sources */,
+				04BBB4FA22DC59E100D5EAC5 /* ProfilePresenter.swift in Sources */,
 				04F2930422D48EA600537605 /* ProfileVC.swift in Sources */,
 				04BBB4F222D5E2FA00D5EAC5 /* MessagePresenter.swift in Sources */,
 				041EFEC122BB250800848C7D /* PostingProject.xcdatamodeld in Sources */,

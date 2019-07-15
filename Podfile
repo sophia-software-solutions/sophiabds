@@ -14,6 +14,7 @@ target 'PostingProject' do
   #  pod 'DropDown'
   #  pod 'FontAwesome.swift'
   pod 'GrowingTextView', '0.6.1'
+  pod 'GoogleSignIn'
   pod 'FacebookCore'
   pod 'FacebookLogin'
   pod 'AccountKit'

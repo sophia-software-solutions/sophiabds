@@ -8,6 +8,7 @@
 
 import UIKit
 import SpringIndicator
+import AccountKit
 
 class HomeVC: UIViewController, Presenter {
     
@@ -19,6 +20,7 @@ class HomeVC: UIViewController, Presenter {
     @IBOutlet weak var newsTableView: UITableView!
     @IBOutlet weak var seeAllNewsButton: UIButton!
     
+    var accountKit: AccountKit?
     var presenter = SignInPresenter()
     var isProcessing: Bool = false {
         didSet {
@@ -66,10 +68,14 @@ extension HomeVC: BasicController {
         setupCollectionView()
         seeAllNewsButton.layer.borderColor = C.Color.BG.orange.cgColor
         seeAllNewsButton.layer.borderWidth = 1.0
+        
+        if accountKit == nil {
+            accountKit = AccountKit(responseType: .accessToken)
+        }
     }
     
     func updateUIs() {
-//        reloadAllData()
+        
     }
 
     private func reloadAllData() {

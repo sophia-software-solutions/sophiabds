@@ -16,6 +16,11 @@ class UserProfile {
     var userAccessToken: String = ""
     var userID: Int = -1
     
+    init(_ token: String = "", _ name: String = "") {
+        userAccessToken = token
+        username = name
+    }
+    
     static func saveData(_ user: UserProfile) {
         UserDefaults.standard.set(user.username, forKey: C.Key.UserDefault.lastLoginUsername)
         UserDefaults.standard.set(user.userAccessToken, forKey: C.Key.UserDefault.accessToken)

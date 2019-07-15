@@ -121,7 +121,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         guard UserProfile.parseData().result else { return }
         
         let storyboard = UIStoryboard(name: C.StoryboardID.storyboardName, bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: C.StoryboardID.landing)
+        let controller = storyboard.instantiateViewController(withIdentifier: C.StoryboardID.tabbar)
         self.window?.rootViewController = controller
         self.window?.makeKeyAndVisible()
     }

@@ -12,7 +12,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileVC" customModule="PostingProject" customModuleProvider="target">
             <connections>
+                <outlet property="avatarImageView" destination="fPS-0I-R5U" id="qRx-1p-igf"/>
+                <outlet property="avatarView" destination="lRV-FR-7XJ" id="tAD-ER-ZeS"/>
                 <outlet property="logoutButton" destination="1l4-ge-2np" id="0hm-kW-BU0"/>
+                <outlet property="usernameLabel" destination="llC-uZ-1Tt" id="AE3-qr-ll1"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -22,7 +25,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bGy-7a-dge">
-                    <rect key="frame" x="20" y="537" width="335" height="100"/>
+                    <rect key="frame" x="20" y="592" width="335" height="45"/>
                     <subviews>
                         <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1l4-ge-2np">
                             <rect key="frame" x="0.0" y="0.0" width="335" height="45"/>
@@ -43,36 +46,56 @@
                                 <action selector="onPressLogout:" destination="-1" eventType="touchUpInside" id="e7o-Bo-uNy"/>
                             </connections>
                         </button>
-                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q9A-QB-814">
-                            <rect key="frame" x="0.0" y="55" width="335" height="45"/>
-                            <color key="backgroundColor" red="0.0" green="0.4866318409" blue="0.91450625659999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="45" id="Mue-DT-fdO"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
-                            <state key="normal" title="Log Out Facebook">
-                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </state>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                    <integer key="value" value="3"/>
-                                </userDefinedRuntimeAttribute>
-                            </userDefinedRuntimeAttributes>
-                            <connections>
-                                <action selector="onPressLogoutFB:" destination="-1" eventType="touchUpInside" id="pHR-TO-90x"/>
-                            </connections>
-                        </button>
                     </subviews>
                 </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="llC-uZ-1Tt">
+                    <rect key="frame" x="30" y="180" width="315" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="1eZ-st-NSo"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
+                    <color key="textColor" red="0.1333333333" green="0.14901960780000001" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lRV-FR-7XJ">
+                    <rect key="frame" x="137.5" y="60" width="100" height="100"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="fPS-0I-R5U">
+                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="0.3411764706" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="fPS-0I-R5U" secondAttribute="trailing" id="46d-1F-swc"/>
+                        <constraint firstAttribute="height" constant="100" id="O9V-Uu-fSj"/>
+                        <constraint firstItem="fPS-0I-R5U" firstAttribute="top" secondItem="lRV-FR-7XJ" secondAttribute="top" id="Wf0-GT-k5f"/>
+                        <constraint firstAttribute="bottom" secondItem="fPS-0I-R5U" secondAttribute="bottom" id="gl5-Bf-COn"/>
+                        <constraint firstItem="fPS-0I-R5U" firstAttribute="leading" secondItem="lRV-FR-7XJ" secondAttribute="leading" id="lza-v8-Dp1"/>
+                        <constraint firstAttribute="width" constant="100" id="niQ-oe-Hz5"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="50"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="lRV-FR-7XJ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="40" id="8Qn-Ps-y4W"/>
+                <constraint firstItem="llC-uZ-1Tt" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="AHJ-3P-6zn"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="bGy-7a-dge" secondAttribute="bottom" constant="30" id="Qqv-D5-4aF"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bGy-7a-dge" secondAttribute="trailing" constant="20" id="XN2-vs-IA8"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="llC-uZ-1Tt" secondAttribute="trailing" constant="30" id="nTE-qa-IzB"/>
+                <constraint firstItem="llC-uZ-1Tt" firstAttribute="top" secondItem="lRV-FR-7XJ" secondAttribute="bottom" constant="20" id="oBf-s6-CjQ"/>
                 <constraint firstItem="bGy-7a-dge" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="wCA-BY-Hjr"/>
+                <constraint firstItem="lRV-FR-7XJ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="wTd-5q-RCa"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="132" y="154.27286356821591"/>
         </view>
     </objects>
+    <resources>
+        <image name="default-placeholder" width="300" height="300"/>
+    </resources>
 </document>

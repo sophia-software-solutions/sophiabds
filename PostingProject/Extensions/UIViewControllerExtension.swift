@@ -53,6 +53,22 @@ extension UIViewController {
         
         self.present(alert, animated: true, completion: nil)
     }
+    
+    func performDisplayHome() {
+        let storyboard = UIStoryboard(name: C.StoryboardID.storyboardName, bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: C.StoryboardID.tabbar)
+        let appdelegate = UIApplication.shared.delegate as! AppDelegate
+        appdelegate.window?.rootViewController = controller
+    }
+    
+    func performDisplayLanding() {
+        UserProfile.removeData()
+        
+        let storyboard = UIStoryboard(name: C.StoryboardID.storyboardName, bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: C.StoryboardID.landing)
+        let appdelegate = UIApplication.shared.delegate as! AppDelegate
+        appdelegate.window?.rootViewController = controller
+    }
 }
 
 extension UIColor {
