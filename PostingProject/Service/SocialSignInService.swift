@@ -7,16 +7,15 @@
 //
 
 import Foundation
-import UIKit
+import AccountKit
 import GoogleSignIn
 import FacebookCore
 import FacebookLogin
 import FBSDKLoginKit
-import AccountKit
 
 typealias GoogleSignInResponse = (_ user: GIDGoogleUser?, _ error: Error?) -> ()
-typealias FacebookSignInResponse = (_ result: LoginManagerLoginResult?, _ error: Error?) -> ()
-//typealias AccountKitSignInResponse = (_ account: Account?, _ token: FBSDKCoreKit.AccessToken?,_ error: Error?) -> ()
+typealias FacebookSignInResponse = (_ result: LoginResult?) -> ()
+//typealias AccountKitSignInResponse = (_ account: Account?, _ token: AccessToken?,_ error: Error?) -> ()
 
 enum AccountKitVerifyType {
     case email(_ email: String?)
@@ -25,7 +24,7 @@ enum AccountKitVerifyType {
 
 protocol SocialSignInInterface {
     func signInWithGoogle(in viewController: UIViewController, completion: GoogleSignInResponse?)
-    func signInWithFacebook(in viewController: UIViewController, readPermissions: [String], completion: FacebookSignInResponse?)
+    func signInWithFacebook(in viewController: UIViewController, readPermissions: [Permission], completion: FacebookSignInResponse?)
 //    func signInWithAccountKit(in viewController: UIViewController, verifyType: AccountKitVerifyType, completion: AccountKitSignInResponse?)
 }
 
@@ -67,9 +66,9 @@ extension SocialSignInService: SocialSignInInterface {
         GIDSignIn.sharedInstance()?.signIn()
     }
     
-    func signInWithFacebook(in viewController: UIViewController, readPermissions: [String], completion: FacebookSignInResponse?) {
-        facebookLoginManager.logIn(permissions: readPermissions, from: viewController) { (result, error) in
-            completion?(result, error)
+    func signInWithFacebook(in viewController: UIViewController, readPermissions: [Permission], completion: FacebookSignInResponse?) {
+        facebookLoginManager.logIn(permissions: readPermissions, viewController: viewController) { (result) in
+            completion?(result)
         }
     }
     

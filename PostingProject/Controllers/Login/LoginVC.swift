@@ -28,18 +28,20 @@ class LoginVC: UIViewController {
     }
     
     @IBAction func loginWithFacebook(_ sender: Any) {
-        socialSignInService.signInWithFacebook(in: self, readPermissions: ["public_profile", "email"]) { (result, error) in
-            if let error = error {
-                print("login with facebook error: \(error.localizedDescription)")
-            }
-            guard let result = result else {
-                print("facebook response result is nil")
+        socialSignInService.signInWithFacebook(in: self, readPermissions: [.publicProfile, .email]) { (result) in
+            guard let loginResult =  result else {
+                print("user login is failed")
                 return
             }
-            if result.isCancelled {
+            
+            switch loginResult {
+            case .failed(let error):
+                print("user login is failed with error \(error.localizedDescription)")
+            case .cancelled:
                 print("user is cancelled")
+            case .success(let grantedPermissions, let declinedPermissions, let accessToken):
+                print("Success with info\n\(grantedPermissions)\n\n\(declinedPermissions)\n\n\(accessToken)\n")
             }
-            print("facebook token: \(String(describing: result.token?.tokenString))")
         }
     }
     
